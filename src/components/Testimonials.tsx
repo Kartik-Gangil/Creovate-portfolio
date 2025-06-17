@@ -26,7 +26,7 @@ const testimonials: TestimonialProps[] = [
     role: "Product Engineer",
     company: "Innovative Solutions",
     image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
-    content: "Both people are very professional and have a great understanding of the latest technologies. They delivered our project on time and exceeded our expectations.",
+    content: "They delivered our project on time and fullfilled our expectations.",
     rating: 5,
   },
 ];
