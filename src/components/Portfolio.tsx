@@ -17,57 +17,30 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Tech Innovators Website",
+    title: "Varsha Research Organization",
     category: "Web Development",
     image: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "A responsive website for a tech startup with interactive elements and modern design.",
-    link: "#",
+    description: "A dynamic website for a research organization, showcasing their research papers and publications.",
+    link: "https://varsharesearchorganization.com/",
     model: "web",
   },
   {
     id: 2,
-    title: "Wellness App",
-    category: "App Development",
+    title: "Readme Up",
+    category: "Web Development",
     image: "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "A mobile app for tracking health and fitness with personalized recommendations.",
-    link: "#",
-    model: "app",
+    description: "AI powered tool to generate README files for GitHub projects, enhancing project visibility and documentation.",
+    link: "https://readmeup.vercel.app/",
+    model: "web",
   },
   {
     id: 3,
-    title: "Corporate Brand Video",
-    category: "Video Editing",
-    image: "https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "A professional corporate video showcasing company values and services.",
-    link: "#",
-    model: "video",
-  },
-  {
-    id: 4,
     title: "E-commerce SEO Campaign",
     category: "SEO Optimization",
     image: "https://images.pexels.com/photos/38568/apple-imac-ipad-workplace-38568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     description: "A comprehensive SEO strategy that increased organic traffic by 200%.",
     link: "#",
     model: "seo",
-  },
-  {
-    id: 5,
-    title: "Product Launch Content",
-    category: "Copywriting",
-    image: "https://images.pexels.com/photos/6446709/pexels-photo-6446709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "Engaging copy for a product launch, including website content and marketing materials.",
-    link: "#",
-    model: "copy",
-  },
-  {
-    id: 6,
-    title: "Financial Services Platform",
-    category: "Web Development",
-    image: "https://images.pexels.com/photos/6693661/pexels-photo-6693661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    description: "A secure and user-friendly platform for financial services with advanced features.",
-    link: "#",
-    model: "web",
   },
 ];
 
@@ -194,14 +167,14 @@ const Portfolio: React.FC = () => {
                   </button>
                 </div>
                 <p className="text-gray-300 mb-6">{selectedProject.description}</p>
-                <div className="mb-6">
+                {/* <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-2">Project Details</h4>
                   <ul className="space-y-2 text-gray-300">
                     <li><span className="text-primary-400">Client:</span> Confidential</li>
                     <li><span className="text-primary-400">Duration:</span> 8 weeks</li>
                     <li><span className="text-primary-400">Technologies:</span> React, Three.js, Tailwind CSS</li>
                   </ul>
-                </div>
+                </div> */}
                 <a 
                   href={selectedProject.link} 
                   target="_blank" 

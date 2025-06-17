@@ -14,35 +14,19 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    name: "Sarah Johnson",
-    role: "Marketing Director",
-    company: "TechNova",
+    name: "Varsha Rajpoot",
+    role: "Director",
+    company: " Varsha Research Organization",
     image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600",
     content: "Working with this team has transformed our online presence. Their website development skills are exceptional, and the SEO optimization has driven significant traffic to our site.",
     rating: 5,
   },
   {
-    name: "Michael Chen",
-    role: "CEO",
+    name: "Satyam Sharma",
+    role: "Product Engineer",
     company: "Innovative Solutions",
     image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
-    content: "The mobile app they developed for us exceeded our expectations. User-friendly, intuitive, and beautifully designed. Our customers love it!",
-    rating: 5,
-  },
-  {
-    name: "Emma Wilson",
-    role: "Content Manager",
-    company: "Global Media",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600",
-    content: "Their copywriting services have elevated our brand messaging. The content is engaging, persuasive, and perfectly aligned with our brand voice.",
-    rating: 4,
-  },
-  {
-    name: "David Rodriguez",
-    role: "Product Manager",
-    company: "NextGen Products",
-    image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=600",
-    content: "The video editing work was phenomenal. They transformed our raw footage into a professional promotional video that has significantly boosted our conversion rates.",
+    content: "Both people are very professional and have a great understanding of the latest technologies. They delivered our project on time and exceeded our expectations.",
     rating: 5,
   },
 ];

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-2xl font-display font-bold mb-6">
-              FUTURE<span className="text-primary-400">VISION</span>
+              CREO<span className="text-primary-400">VATE</span>
             </h3>
             <p className="text-gray-400 mb-6">
               Bringing your digital vision to life with cutting-edge technology and innovative design.
@@ -36,9 +36,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Website Development</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">App Development</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Video Editing</a></li>
+              {/* <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Video Editing</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">SEO Optimization</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Copywriting</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Copywriting</a></li> */}
             </ul>
           </div>
           
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-dark-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} FutureVision. All rights reserved.
+              &copy; {currentYear} CREOVATE. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">Privacy Policy</a>

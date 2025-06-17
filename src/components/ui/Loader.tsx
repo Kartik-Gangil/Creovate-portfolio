@@ -23,7 +23,7 @@ const Loader: React.FC = () => {
         transition={{ duration: 0.5 }}
         className="text-4xl md:text-6xl font-display font-bold mb-8 heading-gradient"
       >
-        FUTURE<span className="text-white">VISION</span>
+        CREO<span className="text-white">VATE</span>
       </motion.div>
       
       <div className="w-64 h-1 bg-dark-100 rounded-full overflow-hidden">

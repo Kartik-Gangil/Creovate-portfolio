@@ -40,10 +40,10 @@ const About: React.FC = () => {
 
   const skills = [
     { name: "Website Development", percentage: 95 },
-    { name: "Video Editing", percentage: 90 },
+    // { name: "Video Editing", percentage: 90 },
     { name: "App Development", percentage: 85 },
-    { name: "SEO Optimization", percentage: 88 },
-    { name: "Copywriting", percentage: 92 },
+    // { name: "SEO Optimization", percentage: 88 },
+    // { name: "Copywriting", percentage: 92 },
   ];
 
   return (
