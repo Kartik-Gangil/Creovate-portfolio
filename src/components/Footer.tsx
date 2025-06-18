@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import logo from '../assets/Untitled_design-removebg-preview_upscaled.webp';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

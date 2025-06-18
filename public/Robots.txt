@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 allow: /
-Sitemap: https://your-domain.vercel.app/sitemap.txt
+Sitemap: https://cerovate-io.vercel.app/sitemap.txt
