@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const response = await axios.post('http://15.206.41.116:8000/send-email', formData);
+    const response = await axios.post('https://15.206.41.116:8000/send-email', formData);
     if (response.status !== 200) {
       setFormStatus({
         submitted: false,
