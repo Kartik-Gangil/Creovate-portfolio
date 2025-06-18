@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import logo from '../assets/Untitled_design-removebg-preview_upscaled.png';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
@@ -9,13 +9,14 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-2xl font-display font-bold mb-6">
-              CREO<span className="text-primary-400">VATE</span>
+            <h3 className="text-4xl flex items-center font-display font-bold mb-6">
+              <img src={logo} alt="" height={100} width={100} />
+              CREO<span className="text-primary-400">VATE.IO</span>
             </h3>
             <p className="text-gray-400 mb-6">
               Bringing your digital vision to life with cutting-edge technology and innovative design.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               </a>
@@ -28,7 +29,7 @@ const Footer: React.FC = () => {
               <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </a>
-            </div>
+            </div> */}
           </div>
           
           <div>
@@ -36,9 +37,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Website Development</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">App Development</a></li>
-              {/* <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Video Editing</a></li>
+               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Video Editing</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">SEO Optimization</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Copywriting</a></li> */}
+              {/* <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Copywriting</a></li> */}
             </ul>
           </div>
           
@@ -75,7 +76,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-dark-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} CREOVATE. All rights reserved.
+              &copy; {currentYear} CREOVATE.IO. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">Privacy Policy</a>

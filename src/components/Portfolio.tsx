@@ -28,7 +28,7 @@ const projects: Project[] = [
     id: 2,
     title: "Readme Up",
     category: "Web Development",
-    image: "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image: "https://repository-images.githubusercontent.com/589727205/85f06633-1c3e-4d07-a653-650ad141f460",
     description: "AI powered tool to generate README files for GitHub projects, enhancing project visibility and documentation.",
     link: "https://readmeup.vercel.app/",
     model: "web",

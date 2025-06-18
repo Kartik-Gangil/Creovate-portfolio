@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import axios from 'axios';
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
@@ -34,24 +35,46 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Simulate form submission
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: 'Thank you for your message! We will get back to you soon.',
-    });
-    
-    // Reset form after successful submission
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
-    
+
+    const response = await axios.post('http://localhost:8000/send-email', formData);
+    if (response.status !== 200) {
+      setFormStatus({
+        submitted: false,
+        success: false,
+        message: 'Failed to send your message. Please try again later.',
+      });
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+
+      return;
+    }
+    else {
+      setFormStatus({
+        submitted: true,
+        success: true,
+        message: 'Thank you for your message! We will get back to you soon.',
+      });
+      // reset the form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+     
+    }
+    // console.log(formData)
+    // email : "kartikgangil@gmail.com"
+    // message : "hello"
+    // name :"Kartik gangil"
+    // subject :"Website Development"
+
     // Reset form status after 5 seconds
     setTimeout(() => {
       setFormStatus({
@@ -88,7 +111,7 @@ const Contact: React.FC = () => {
             className="lg:col-span-2 glass-card p-8"
           >
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="w-12 h-12 rounded-lg bg-primary-500/20 flex items-center justify-center mr-4 text-primary-400 flex-shrink-0">
@@ -99,17 +122,17 @@ const Contact: React.FC = () => {
                   <p className="text-gray-300">+918871596881 , +916265511439 </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-12 h-12 rounded-lg bg-primary-500/20 flex items-center justify-center mr-4 text-primary-400 flex-shrink-0">
                   <Mail size={20} />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Email</h4>
-                  <p className="text-gray-300">Kartikgangil@gmail.com , itzhimanshusharmaofficial@gmail.com</p>
+                  <p className="text-gray-300">{"Creovate.io@gmail.com".toUpperCase()}</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-12 h-12 rounded-lg bg-primary-500/20 flex items-center justify-center mr-4 text-primary-400 flex-shrink-0">
                   <MapPin size={20} />
@@ -120,8 +143,8 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-            
-            <div className="mt-8">
+
+            {/* <div className="mt-8">
               <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
               <div className="flex space-x-4">
                 <a href="#" className="w-10 h-10 rounded-full bg-dark-100 flex items-center justify-center text-white hover:bg-primary-600 transition-colors duration-300">
@@ -137,9 +160,9 @@ const Contact: React.FC = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                 </a>
               </div>
-            </div>
+            </div> */}
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
@@ -147,14 +170,13 @@ const Contact: React.FC = () => {
             className="lg:col-span-3 glass-card p-8"
           >
             <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
-            
+
             {formStatus.submitted ? (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`p-4 rounded-lg mb-6 ${
-                  formStatus.success ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'
-                }`}
+                className={`p-4 rounded-lg mb-6 ${formStatus.success ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'
+                  }`}
               >
                 {formStatus.message}
               </motion.div>
@@ -190,7 +212,7 @@ const Contact: React.FC = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="subject" className="block text-gray-300 mb-2">
                     Subject
@@ -212,7 +234,7 @@ const Contact: React.FC = () => {
                     <option value="Other">Other</option>
                   </select>
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="message" className="block text-gray-300 mb-2">
                     Your Message
@@ -227,7 +249,7 @@ const Contact: React.FC = () => {
                     className="w-full px-4 py-3 bg-dark-100 border border-dark-100 focus:border-primary-500 rounded-lg text-white outline-none transition-colors duration-300 resize-none"
                   ></textarea>
                 </div>
-                
+
                 <motion.button
                   type="submit"
                   whileHover={{ scale: 1.02 }}
