@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-4xl flex items-center font-display font-bold mb-6">
-              <img src={logo} alt="" height={100} width={100} />
+            <h3 className="text-4xl flex items-center font-display font-bold mb-6 max-sm:text-2xl">
+              <img src={logo} alt="" height={100} width={100} className='max-sm:h-30 max-sm:w-30'/>
               CREO<span className="text-primary-400">VATE.IO</span>
             </h3>
             <p className="text-gray-400 mb-6">

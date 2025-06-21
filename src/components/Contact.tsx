@@ -119,7 +119,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Phone</h4>
-                  <p className="text-gray-300">+918871596881 , +916265511439 </p>
+                  <p className="text-gray-300 break-all">+918871596881 , +916265511439 </p>
                 </div>
               </div>
 
@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Email</h4>
-                  <p className="text-gray-300">{"Creovate.io@gmail.com".toUpperCase()}</p>
+                  <p className="text-gray-300 break-all">creovate.io@gmail.com</p>
                 </div>
               </div>
 
@@ -139,7 +139,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Location</h4>
-                  <p className="text-gray-300">Gwalior , (M.P.)</p>
+                  <p className="text-gray-300">Gwalior,(M.P.)</p>
                 </div>
               </div>
             </div>
