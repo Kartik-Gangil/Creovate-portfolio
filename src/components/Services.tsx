@@ -59,7 +59,7 @@ const Services: React.FC = () => {
     {
       icon: <Briefcase size={28} />,
       title: "Business Services",
-      description: ["Business Consulting", "Revenue Optimization", "Competitive Research and Analysis", "Client / Customer Strategy"],
+      description: ["Business Consulting", "Revenue Optimization", "Competitive Research and Analysis", "Client / Customer Retention Strategy"],
     }
   ];
 

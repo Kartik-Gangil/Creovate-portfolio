@@ -70,7 +70,7 @@ const Portfolio: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-            Product we <span className="heading-gradient">Delivered</span>
+            Products we <span className="heading-gradient">Delivered</span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Explore our recent projects and see how we've helped businesses achieve their goals.
