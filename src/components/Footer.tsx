@@ -9,10 +9,19 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="grid grid-flow-col max-lg:grid-rows-2 text-4xl items-center font-display font-bold mb-6 max-sm:text-2xl lg:text-2xl">
-              <img src={logo} alt="" height={100} width={100} className='max-sm:h-30 max-sm:w-30'/>
-              <p>CREO<span className="text-primary-400">VATE.IO</span></p>
+            <div className="flex items-center gap-2 mb-6 text-4xl font-display font-bold 
+                max-sm:text-2xl lg:text-2xl">
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-20 w-20 max-sm:h-12 max-sm:w-12 object-contain"
+              />
+              <p>
+                CREO<span className="text-primary-400">VATE.IO</span>
+              </p>
             </div>
+
+
             <p className="text-gray-400 mb-6">
               Bringing your digital vision to life with cutting-edge technology and innovative design.
             </p>
