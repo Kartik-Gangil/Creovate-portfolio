@@ -94,7 +94,7 @@ const HeroModel: React.FC = () => {
   });
   
   return (
-    <div ref={ref} className="w-full h-full">
+    <div ref={ref} className="w-full h-full z-0">
       {inView && (
         <Canvas>
           <Scene />

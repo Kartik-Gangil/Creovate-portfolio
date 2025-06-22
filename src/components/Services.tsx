@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code, Film, Smartphone, Search, PenTool } from 'lucide-react';
+import { Code, Film, Briefcase } from 'lucide-react';
 
 interface ServiceProps {
   icon: React.ReactNode;
   title: string;
-  description: string;
+  description: Array<string>;
   delay: number;
 }
 
@@ -28,7 +28,13 @@ const ServiceCard: React.FC<ServiceProps> = ({ icon, title, description, delay }
         {icon}
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-gray-300">{description}</p>
+      <ul className="text-gray-300">
+        {description.map((item, index) => (
+          <li key={index} className="list-disc text-lg list-inside">
+            {item}
+          </li>
+        ))}
+      </ul>
     </motion.div>
   );
 };
@@ -42,29 +48,19 @@ const Services: React.FC = () => {
   const services = [
     {
       icon: <Code size={28} />,
-      title: "Website Development",
-      description: "From simple landing pages to complex web applications, we create responsive and engaging websites tailored to your needs.",
+      title: "Software as a Service (SaaS)",
+      description: ["Website Development" , "Application Development", "E-commerce Solutions", "Content Management Systems (CMS)"]
     },
     {
       icon: <Film size={28} />,
-      title: "Video Editing",
-      description: "Professional video editing services to help you tell your story with stunning visuals and seamless transitions.",
+      title: "Digital Marketing",
+      description: ["Social Media Management", "Content Creation", "SEO Optimization" , "Content Writing" , "Video Editing"]
     },
     {
-      icon: <Smartphone size={28} />,
-      title: "App Development",
-      description: "Native and cross-platform mobile applications that provide exceptional user experiences and functionality.",
-    },
-    {
-      icon: <Search size={28} />,
-      title: "SEO Optimization",
-      description: "Improve your online visibility and reach your target audience through our comprehensive SEO strategies.",
-    },
-    {
-      icon: <PenTool size={28} />,
-      title: "Copywriting",
-      description: "Compelling and persuasive content that engages your audience and drives conversions.",
-    },
+      icon: <Briefcase size={28} />,
+      title: "Business Services",
+      description: ["Business Consulting", "Revenue Optimization", "Competitive Research and Analysis", "Client / Customer Strategy"],
+    }
   ];
 
   return (

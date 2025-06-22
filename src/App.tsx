@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Cursor from './components/ui/Cursor';
 import Loader from './components/ui/Loader';
 import BackgroundParticles from './components/3d/BackgroundParticles';
+import StatsCounter from './components/StatsCounter';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +37,7 @@ function App() {
       <Navbar />
       <main className="relative z-10">
         <Hero />
+        <StatsCounter/>
         <Services />
         <Portfolio />
         <Testimonials />

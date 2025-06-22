@@ -39,11 +39,12 @@ const About: React.FC = () => {
   });
 
   const skills = [
-    { name: "Website Development", percentage: 95 },
-    { name: "Video Editing", percentage: 90 },
-    { name: "App Development", percentage: 85 },
-    { name: "SEO Optimization", percentage: 88 },
-    // { name: "Copywriting", percentage: 92 },
+    { name: "Software as a Solution", percentage: 100 },
+    { name: "End-to-End application", percentage: 100 },
+    { name: "Making Digital Presence", percentage: 97 },
+    { name: "Rank your website with our SEO", percentage: 98 },
+    { name: "Social Media Marketing", percentage: 98 },
+    { name: "Business Consulting", percentage: 99 },
   ];
 
   return (
@@ -75,16 +76,17 @@ const About: React.FC = () => {
               We envision a digital landscape where businesses of all sizes can thrive through innovative technology solutions and strategic digital presence. Our mission is to empower businesses with cutting-edge digital tools and services that drive growth and success.
             </p>
             <p className="text-gray-300 mb-6">
-              Founded in 2018, our team brings together expertise in various digital disciplines to provide comprehensive solutions tailored to each client's unique needs. We believe in collaborative partnerships, transparent communication, and delivering exceptional results that exceed expectations.
+              Founded in 2025, our team brings together expertise in various digital disciplines to provide comprehensive solutions tailored to each client's unique needs. We believe in collaborative partnerships, transparent communication, and delivering exceptional results that exceed expectations.
             </p>
-            <div className="flex gap-4">
-              <motion.button
+            <h1 className='text-6xl font-bold mb-5 text-center'>"We Build Trust"</h1>
+            <div className="flex gap-4 justify-center">
+              {/* <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-primary"
               >
                 Our Process
-              </motion.button>
+              </motion.button> */}
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.05 }}

@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24 pb-16">
-      <div 
+      <div
         ref={containerRef}
         className="container mx-auto px-4 md:px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
       >
@@ -31,6 +31,8 @@ const Hero: React.FC = () => {
           <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0">
             We bring your vision to life with cutting-edge technology and innovative design.
             Transform your brand with our comprehensive digital solutions.
+            <br></br>
+            <span className='text-2xl font-bold'>"We Build Trust"</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <motion.button
@@ -51,22 +53,36 @@ const Hero: React.FC = () => {
             </motion.a>
           </div>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="w-full h-[400px] lg:h-[500px] relative"
         >
+          <motion.div
+            className="absolute flex h-full w-full z-10 flex-col items-center justify-center text-center"
+            initial={{ y:10}}
+            animate={{ y:0 }}
+            transition={{
+              duration: 1, delay: 1,
+              repeat: Infinity,
+              repeatType: "reverse"
+            }}
+          >
+            <h1 className="text-gray-400 mb-2 font-bold text-3xl md:text-5xl lg:text-6xl"> <span className='heading-gradient text-shadow text-4xl md:text-6xl lg:text-7xl'>24</span> hrs </h1>
+            <h3 className="text-gray-400 mb-2 text-2xl md:text-4xl lg:text-5xl">Callback </h3>
+            <h2 className="text-gray-400 mb-2 text-4xl md:text-6xl lg:text-7xl font-bold">Guarantee</h2>
+          </motion.div>
           <HeroModel />
         </motion.div>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ 
+        transition={{
           duration: 1,
           delay: 1,
           repeat: Infinity,

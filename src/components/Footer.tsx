@@ -39,6 +39,9 @@ const Footer: React.FC = () => {
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">App Development</a></li>
                <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Video Editing</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">SEO Optimization</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Business Consulting</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Revenue Optimization</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Social Media Management</a></li>
               {/* <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300">Copywriting</a></li> */}
             </ul>
           </div>
@@ -47,10 +50,9 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-6">Company</h4>
             <ul className="space-y-3">
               <li><a href="#about" className="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
-              <li><a href="#portfolio" className="text-gray-400 hover:text-white transition-colors duration-300">Portfolio</a></li>
+              <li><a href="#portfolio" className="text-gray-400 hover:text-white transition-colors duration-300">Products</a></li>
               <li><a href="#testimonials" className="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
+              {/* <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li> */}
             </ul>
           </div>
           
