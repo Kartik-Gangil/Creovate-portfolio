@@ -3,16 +3,19 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink } from 'lucide-react';
 import PortfolioModel from './3d/PortfolioModel';
+import ubonCaseStudy from '../assets/ChatGPT Image Jun 24, 2025, 07_58_42 PM (1).png';
 
 interface Project {
   id: number;
   title: string;
   category: string;
-  image: string;
+  image: string | {ubonCaseStudy: string };
   description: string;
   link: string;
   model: string;
 }
+
+
 
 const projects: Project[] = [
   {
@@ -42,6 +45,15 @@ const projects: Project[] = [
     link: "#",
     model: "seo",
   },
+  {
+    id: 4,
+    title: "Ubon Case study Video Edit",
+    category: "Video Editing",
+    image: ubonCaseStudy,
+    description: "A comprehensive video editing project that showcases the Ubon case study.",
+    link: "https://www.instagram.com/reel/DLPjwQONlCr/?igsh=MXhmNTFmMHNuNXl3eA==",
+    model: "video",
+  }
 ];
 
 const Portfolio: React.FC = () => {
@@ -53,7 +65,7 @@ const Portfolio: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const categories = ['All', 'Web Development', 'App Development', 'Video Editing', 'SEO Optimization', 'Copywriting'];
+  const categories = ['All', 'Web Development', 'App Development', 'Video Editing', 'SEO Optimization'];
 
   const filteredProjects = activeFilter === 'All'
     ? projects
@@ -102,7 +114,7 @@ const Portfolio: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glass-card overflow-hidden group cursor-pointer"
+              className="glass-card overflow-hidden group cursor-pointer "
               onClick={() => setSelectedProject(project)}
             >
               <div className="relative h-56 overflow-hidden">
@@ -110,7 +122,7 @@ const Portfolio: React.FC = () => {
                   loading='lazy'
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110  "
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-300/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <div>
