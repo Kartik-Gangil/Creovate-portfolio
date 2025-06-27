@@ -11,6 +11,7 @@ import Cursor from './components/ui/Cursor';
 import Loader from './components/ui/Loader';
 import BackgroundParticles from './components/3d/BackgroundParticles';
 import StatsCounter from './components/StatsCounter';
+import ServedIndustries from './components/Served_Industries';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -40,6 +41,7 @@ function App() {
         <StatsCounter/>
         <Services />
         <Portfolio />
+        <ServedIndustries />
         <Testimonials />
         <About />
         <Contact />
