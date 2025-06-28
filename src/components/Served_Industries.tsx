@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink } from 'lucide-react';
+
 
 
 interface Project {
@@ -35,7 +35,7 @@ const projects: Project[] = [
     {
         id: 3,
         category: "Restaurant",
-        image: "https://images.pexels.com/photos/29067916/pexels-photo-29067916.jpeg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8bb695_Lr8Bu2ifOwupEwWIykMnfBXtMnTw&s",
         description: "A comprehensive SEO strategy that increased organic traffic by 200%.",
         link: "#",
         model: "seo",
@@ -48,7 +48,6 @@ const ServedIndustries: React.FC = () => {
         threshold: 0.1,
     });
 
-    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
 
     return (
@@ -79,7 +78,6 @@ const ServedIndustries: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             className="glass-card overflow-hidden group cursor-pointer "
-                            onClick={() => setSelectedProject(project)}
                         >
                             <div className="relative h-60 overflow-hidden group">
                                 <img
@@ -123,63 +121,7 @@ const ServedIndustries: React.FC = () => {
             </div>
 
 
-            {/* Project Detail Modal */}
-            {
-                selectedProject && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-dark-300/80 backdrop-blur-sm"
-                    >
-                        <motion.div
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            transition={{ duration: 0.3 }}
-                            className="bg-dark-200 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-auto"
-                        >
-                            <div className="grid grid-cols-1 md:grid-cols-2">
-                                <div className="h-[300px] md:h-full relative">
-                                    <div className="absolute inset-0">
-                                        {/* <ServedIndustriesModel modelType={selectedProject.model} /> */}
-                                    </div>
-                                </div>
-                                <div className="p-6 md:p-8">
-                                    <div className="flex justify-between items-start mb-4">
-                                        <div>
-                                            <span className="text-primary-400 text-sm font-medium">{selectedProject.category}</span>
-                                            <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
-                                        </div>
-                                        <button
-                                            onClick={() => setSelectedProject(null)}
-                                            className="text-gray-400 hover:text-white transition-colors duration-300"
-                                        >
-                                            ✕
-                                        </button>
-                                    </div>
-                                    <p className="text-gray-300 mb-6">{selectedProject.description}</p>
-                                    {/* <div className="mb-6">
-                  <h4 className="text-lg font-semibold mb-2">Project Details</h4>
-                  <ul className="space-y-2 text-gray-300">
-                    <li><span className="text-primary-400">Client:</span> Confidential</li>
-                    <li><span className="text-primary-400">Duration:</span> 8 weeks</li>
-                    <li><span className="text-primary-400">Technologies:</span> React, Three.js, Tailwind CSS</li>
-                  </ul>
-                </div> */}
-                                    <a
-                                        href={selectedProject.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="btn-primary flex items-center gap-2"
-                                    >
-                                        View Project <ExternalLink size={16} />
-                                    </a>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </motion.div>
-                )
-            }
+          
         </section >
     );
 };
