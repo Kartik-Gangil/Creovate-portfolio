@@ -22,7 +22,7 @@ const projects: Project[] = [
     id: 1,
     title: "Varsha Research Organization",
     category: "Web Development",
-    image: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image: "./Varsha_research_org_banner.png",
     description: "A dynamic website for a research organization, showcasing their research papers and publications.",
     link: "https://varsharesearchorganization.com/",
     model: "web",
@@ -30,7 +30,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "Readme Up",
-    category: "Web Development",
+    category: "AI Agent",
     image: "https://repository-images.githubusercontent.com/589727205/85f06633-1c3e-4d07-a653-650ad141f460",
     description: "AI powered tool to generate README files for GitHub projects, enhancing project visibility and documentation.",
     link: "https://readmeup.vercel.app/",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     id: 4,
     title: "Ubon Case study Video Edit",
     category: "Video Editing",
-    image: ubonCaseStudy,
+    image: "./Ubon_case_study_thumbnail.png",
     description: "A comprehensive video editing project that showcases the Ubon case study.",
     link: "https://www.instagram.com/reel/DLPjwQONlCr/?igsh=MXhmNTFmMHNuNXl3eA==",
     model: "video",
@@ -65,7 +65,7 @@ const Portfolio: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const categories = ['All', 'Web Development', 'App Development', 'Video Editing', 'SEO Optimization'];
+  const categories = ['All', 'Web Development', 'App Development', 'Video Editing', 'SEO Optimization' , 'AI Agent'];
 
   const filteredProjects = activeFilter === 'All'
     ? projects

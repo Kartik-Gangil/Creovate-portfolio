@@ -47,7 +47,7 @@ const Counter = ({ target, suffix = '', duration = 2 }: { target: number; suffix
 
 const StatsCounter: React.FC = () => {
     return (
-        <motion.div className=" mx-auto container glass-card hover:shadow-lg hover:shadow-primary-500/10 transition-all duration-300 grid grid-cols-2 md:grid-cols-4 gap-6  p-6 rounded-xl shadow-md">
+        <motion.div className="mx-auto container glass-card hover:shadow-lg hover:shadow-primary-500/10 transition-all duration-300 grid grid-cols-2 md:grid-cols-4 gap-6  p-6 rounded-xl shadow-md">
             {stats.map((stat, idx) => (
                 <div key={idx} className=" flex flex-col items-center">
                     <Counter target={stat.target} suffix={stat.suffix} />
