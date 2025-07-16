@@ -12,6 +12,7 @@ import Loader from './components/ui/Loader';
 import BackgroundParticles from './components/3d/BackgroundParticles';
 import StatsCounter from './components/StatsCounter';
 import ServedIndustries from './components/Served_Industries';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ function App() {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -38,7 +39,7 @@ function App() {
       <Navbar />
       <main className="relative z-10">
         <Hero />
-        <StatsCounter/>
+        <StatsCounter />
         <Services />
         <Portfolio />
         <ServedIndustries />
@@ -47,6 +48,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
