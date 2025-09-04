@@ -35,55 +35,61 @@ const Contact: React.FC = () => {
     }));
   };
 
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycbyjGiSZkKcOcmLB_iwhIAeS7qjS8nkoP1dsZ_zHajbmerOc4xNNIKzc96xK0K00OMp1/exec"
+
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const response = await axios.post('https://creovate-backend.up.railway.app/send-email', formData);
-    if (response.status !== 200) {
-      setFormStatus({
-        submitted: false,
-        success: false,
-        message: 'Failed to send your message. Please try again later.',
-      });
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+    try {
+      const res = await fetch(SHEET_URL, {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
       });
 
-      return;
-    }
-    else {
+      const result = await res.json();
+
+      if (result.result === "success") {
+        setFormStatus({
+          submitted: true,
+          success: true,
+          message: "Thank you for your message! We will get back to you soon.",
+        });
+
+        // Reset form data
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        // Handle error returned from server
+        setFormStatus({
+          submitted: true,
+          success: false,
+          message: "Error: " + (result.error || "Unknown error"),
+        });
+      }
+    } catch (err: any) {
       setFormStatus({
         submitted: true,
-        success: true,
-        message: 'Thank you for your message! We will get back to you soon.',
+        success: false,
+        message: "Error: " + err.message,
       });
-      // reset the form after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-
     }
-    // console.log(formData)
-    // email : "kartikgangil@gmail.com"
-    // message : "hello"
-    // name :"Kartik gangil"
-    // subject :"Website Development"
 
     // Reset form status after 5 seconds
     setTimeout(() => {
       setFormStatus({
         submitted: false,
         success: false,
-        message: '',
+        message: "",
       });
     }, 5000);
   };
+
 
   return (
     <section id="contact" className="py-20 relative">
