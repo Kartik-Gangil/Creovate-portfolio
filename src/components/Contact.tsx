@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
-import axios from 'axios';
+
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const SHEET_URL = "https://script.google.com/macros/s/AKfycbyjGiSZkKcOcmLB_iwhIAeS7qjS8nkoP1dsZ_zHajbmerOc4xNNIKzc96xK0K00OMp1/exec"
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycby37Vwu1zhXhnpxkKWqVIPJ3TGysVmd7EhlT3esTtSfre5FH51Qzqlb00B24gIRNU66/exec"
 
 
   const handleSubmit = async (e: React.FormEvent) => {
