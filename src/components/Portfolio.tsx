@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink } from 'lucide-react';
 import PortfolioModel from './3d/PortfolioModel';
-import ubonCaseStudy from '../assets/ChatGPT Image Jun 24, 2025, 07_58_42 PM (1).png';
 
 interface Project {
   id: number;
@@ -20,6 +19,15 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "RED MARCH",
+    category: "Web Development",
+    image: "./Redmarch1.png",
+    description: "A dynamic E-commerce website focused on making personal brand, showcasing their luxurious shoes and variants.",
+    link: "https://ecommerce-redmarch.vercel.app/",
+    model: "web",
+  },
+  {
+    id: 2,
     title: "Varsha Research Organization",
     category: "Web Development",
     image: "./Varsha_research_org_banner.png",
@@ -28,7 +36,7 @@ const projects: Project[] = [
     model: "web",
   },
   {
-    id: 2,
+    id: 3,
     title: "Readme Up",
     category: "AI Agent",
     image: "https://repository-images.githubusercontent.com/589727205/85f06633-1c3e-4d07-a653-650ad141f460",
@@ -37,7 +45,7 @@ const projects: Project[] = [
     model: "web",
   },
   {
-    id: 3,
+    id: 4,
     title: "E-commerce SEO Campaign",
     category: "SEO Optimization",
     image: "https://images.pexels.com/photos/38568/apple-imac-ipad-workplace-38568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -46,7 +54,7 @@ const projects: Project[] = [
     model: "seo",
   },
   {
-    id: 4,
+    id: 5,
     title: "Ubon Case study Video Edit",
     category: "Video Editing",
     image: "./Ubon_case_study_thumbnail.png",
@@ -65,7 +73,7 @@ const Portfolio: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const categories = ['All', 'Web Development', 'App Development', 'Video Editing', 'SEO Optimization' , 'AI Agent'];
+  const categories = ['All', 'Web Development','Video Editing', 'SEO Optimization' , 'AI Agent'];
 
   const filteredProjects = activeFilter === 'All'
     ? projects
@@ -152,18 +160,19 @@ const Portfolio: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-dark-300/80 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-dark-300/80 backdrop-blur-sm "
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="bg-dark-200 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-auto"
+            className="bg-dark-200 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
           >
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="h-[300px] md:h-full relative">
-                <div className="absolute inset-0">
-                  <PortfolioModel modelType={selectedProject.model} />
+              <div className="h-[200px] md:h-full relative">
+                <div className="absolute inset-0 bg-[#E2E0DC] md:bg-transparent object-contain flex justify-center">
+                  {/* <PortfolioModel modelType={selectedProject.model} /> */}
+                  <img src={selectedProject.image} className='max-w-full max-h-full object-contain' alt="" />
                 </div>
               </div>
               <div className="p-6 md:p-8">

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/Untitled_design-removebg-preview_upscaled.webp'
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -59,7 +58,7 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <a href="#home" className="text-2xl flex items-center font-display font-bold">
-        <img src={logo} alt="" height={30} width={30} />
+          <img src="/android-chrome-512x512.png" alt="" height={30} width={30} />
           CREO<span className="text-primary-400">VATE.IO</span>
         </a>
         

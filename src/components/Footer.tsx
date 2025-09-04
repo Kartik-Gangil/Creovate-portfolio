@@ -1,6 +1,5 @@
 import React from 'react';
 // import { motion } from 'framer-motion';
-import logo from '../assets/Untitled_design-removebg-preview_upscaled.webp';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
@@ -12,7 +11,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center gap-2 mb-6 text-4xl font-display font-bold 
                 max-sm:text-2xl lg:text-2xl">
               <img
-                src={logo}
+                src="/android-chrome-512x512.png"
                 alt="Logo"
                 className="h-20 w-20 max-sm:h-12 max-sm:w-12 object-contain"
               />

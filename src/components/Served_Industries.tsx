@@ -13,6 +13,20 @@ interface Project {
 
 }
 
+const listItemVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+};
+
+const listVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.15, // items animate one after another
+        },
+    },
+};
+
 
 
 const projects: Project[] = [
@@ -102,6 +116,9 @@ const ServedIndustries: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             className="glass-card overflow-hidden group cursor-pointer"
+                            variants={listVariants}
+                            initial="hidden"
+                            whileHover="visible"
                         >
                             <div className="relative h-60 overflow-hidden group">
                                 <img
@@ -120,11 +137,20 @@ const ServedIndustries: React.FC = () => {
                                         </h2>
 
                                         {/* Centered ul, fades in on hover */}
-                                        <ul className="absolute opacity-0 group-hover:opacity-100  transition-all duration-500 ease-in-out text-white space-y-1 text-center">
-                                            {project.description.map((desc, index) => {
-                                                return (<li key={index} className='text-left list-disc'>{desc}</li>)
-                                            })}
-                                        </ul>
+                                        <motion.ul
+                                            className="absolute opacity-0 px-5 group-hover:opacity-100 transition-all duration-500 ease-in-out text-white space-y-1 text-center"
+                                            // trigger animation on hover
+                                        >
+                                            {project.description.map((desc, index) => (
+                                                <motion.li
+                                                    key={index}
+                                                    className="text-left list-disc"
+                                                    variants={listItemVariants}
+                                                >
+                                                    {desc}
+                                                </motion.li>
+                                            ))}
+                                        </motion.ul>
 
                                     </div>
                                 </div>
