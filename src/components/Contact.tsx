@@ -35,8 +35,7 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const SHEET_URL = "https://script.google.com/macros/s/AKfycby37Vwu1zhXhnpxkKWqVIPJ3TGysVmd7EhlT3esTtSfre5FH51Qzqlb00B24gIRNU66/exec"
-
+  const SHEET_URL = "/api/google-sheet"
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,7 +48,7 @@ const Contact: React.FC = () => {
       });
 
       const result = await res.json();
-
+      // console.log(result)
       if (result.result === "success") {
         setFormStatus({
           submitted: true,
@@ -72,6 +71,7 @@ const Contact: React.FC = () => {
           message: "Error: " + (result.error || "Unknown error"),
         });
       }
+
     } catch (err: any) {
       setFormStatus({
         submitted: true,

@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink } from 'lucide-react';
-import PortfolioModel from './3d/PortfolioModel';
+// import PortfolioModel from './3d/PortfolioModel';
 
 interface Project {
   id: number;
   title: string;
   category: string;
-  image: string | {ubonCaseStudy: string };
+  image: string ;
   description: string;
   link: string;
   model: string;
@@ -21,7 +21,7 @@ const projects: Project[] = [
     id: 1,
     title: "RED MARCH",
     category: "Web Development",
-    image: "./Redmarch1.png",
+    image: "./Redmarch1.webp",
     description: "A dynamic E-commerce website focused on making personal brand, showcasing their luxurious shoes and variants.",
     link: "https://ecommerce-redmarch.vercel.app/",
     model: "web",
@@ -30,7 +30,7 @@ const projects: Project[] = [
     id: 2,
     title: "Varsha Research Organization",
     category: "Web Development",
-    image: "./Varsha_research_org_banner.png",
+    image: "./Varsha_research_org_banner.webp",
     description: "A dynamic website for a research organization, showcasing their research papers and publications.",
     link: "https://varsharesearchorganization.com/",
     model: "web",
@@ -57,7 +57,7 @@ const projects: Project[] = [
     id: 5,
     title: "Ubon Case study Video Edit",
     category: "Video Editing",
-    image: "./Ubon_case_study_thumbnail.png",
+    image: "./Ubon_case_study_thumbnail.webp",
     description: "A comprehensive video editing project that showcases the Ubon case study.",
     link: "https://www.instagram.com/reel/DLPjwQONlCr/?igsh=MXhmNTFmMHNuNXl3eA==",
     model: "video",
