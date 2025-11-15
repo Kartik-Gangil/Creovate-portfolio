@@ -61,6 +61,15 @@ const projects: Project[] = [
     description: "A comprehensive video editing project that showcases the Ubon case study.",
     link: "https://www.instagram.com/reel/DLPjwQONlCr/?igsh=MXhmNTFmMHNuNXl3eA==",
     model: "video",
+  },
+  {
+    id: 6,
+    title: "Modi Eye Care",
+    category: "Web Development",
+    image: "./modi-care.png",
+    description: "A hospital management system for Modi Care Hospital to manage their hospital and appointments. ",
+    link: "http://43.230.203.230/",
+    model: "web",
   }
 ];
 

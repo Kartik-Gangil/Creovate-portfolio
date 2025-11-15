@@ -117,7 +117,6 @@ const ServedIndustries: React.FC = () => {
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             className="glass-card overflow-hidden group cursor-pointer"
                             variants={listVariants}
-                            initial="hidden"
                             whileHover="visible"
                         >
                             <div className="relative h-60 overflow-hidden group">
