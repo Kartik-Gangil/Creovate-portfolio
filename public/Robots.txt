@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
-Sitemap: https://creovate-io.vercel.app/sitemap.xml
+Sitemap: https://www.creovateio.in/sitemap.xml
