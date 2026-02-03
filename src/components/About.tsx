@@ -43,8 +43,6 @@ const About: React.FC = () => {
     { name: "End-to-End application", percentage: 100 },
     { name: "Making Digital Presence", percentage: 97 },
     { name: "Rank your website with our SEO", percentage: 98 },
-    { name: "Social Media Marketing", percentage: 98 },
-    { name: "Business Consulting", percentage: 99 },
   ];
 
   return (
