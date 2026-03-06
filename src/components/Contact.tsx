@@ -35,20 +35,26 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const SHEET_URL = "/api/google-sheet"
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycby37Vwu1zhXhnpxkKWqVIPJ3TGysVmd7EhlT3esTtSfre5FH51Qzqlb00B24gIRNU66/exec"
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
+
+      const form = new FormData();
+      form.append("name", formData.name);
+      form.append("email", formData.email);
+      form.append("subject", formData.subject);
+      form.append("message", formData.message);
+
       const res = await fetch(SHEET_URL, {
         method: "POST",
-        body: JSON.stringify(formData),
-        headers: { "Content-Type": "application/json" },
+        body: form,
       });
 
       const result = await res.json();
-      // console.log(result)
+
       if (result.result === "success") {
         setFormStatus({
           submitted: true,
@@ -56,15 +62,14 @@ const Contact: React.FC = () => {
           message: "Thank you for your message! We will get back to you soon.",
         });
 
-        // Reset form data
         setFormData({
           name: "",
           email: "",
           subject: "",
           message: "",
         });
+
       } else {
-        // Handle error returned from server
         setFormStatus({
           submitted: true,
           success: false,
@@ -80,7 +85,6 @@ const Contact: React.FC = () => {
       });
     }
 
-    // Reset form status after 5 seconds
     setTimeout(() => {
       setFormStatus({
         submitted: false,
@@ -89,7 +93,6 @@ const Contact: React.FC = () => {
       });
     }, 5000);
   };
-
 
   return (
     <section id="contact" className="py-20 relative">
@@ -205,10 +208,10 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-gray-300 mb-2">
-                      Your Email
+                      Phone No.
                     </label>
                     <input
-                      type="email"
+                      type="text"
                       id="email"
                       name="email"
                       value={formData.email}

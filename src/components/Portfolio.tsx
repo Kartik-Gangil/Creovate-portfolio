@@ -70,6 +70,15 @@ const projects: Project[] = [
     description: "A hospital management system for Modi Care Hospital to manage their hospital and appointments. ",
     link: "http://43.230.203.230/",
     model: "web",
+  },
+  {
+    id: 7,
+    title: "Leela Marriage Bureau",
+    category: "Web Development",
+    image: "https://leelafacility.in/assets/logo-C0TCjoYr.png",
+    description: "A matrimonial platform designed to help individuals find their life partners with ease and security.",
+    link: "https://leelafacility.in",
+    model: "web",
   }
 ];
 
