@@ -23,7 +23,7 @@ const projects: Project[] = [
     category: "Web Development",
     image: "./Redmarch1.webp",
     description: "A dynamic E-commerce website focused on making personal brand, showcasing their luxurious shoes and variants.",
-    link: "https://ecommerce-redmarch.vercel.app/",
+    link: "https://redmarch.creovateio.in/",
     model: "web",
   },
   {
@@ -41,7 +41,7 @@ const projects: Project[] = [
     category: "AI Agent",
     image: "https://repository-images.githubusercontent.com/589727205/85f06633-1c3e-4d07-a653-650ad141f460",
     description: "AI powered tool to generate README files for GitHub projects, enhancing project visibility and documentation.",
-    link: "https://readmeup.vercel.app/",
+    link: "https://readmeup.creovateio.in/",
     model: "web",
   },
   {
@@ -68,7 +68,7 @@ const projects: Project[] = [
     category: "Web Development",
     image: "./modi-care.png",
     description: "A hospital management system for Modi Care Hospital to manage their hospital and appointments. ",
-    link: "http://43.230.203.230/",
+    link: "http://66.116.204.196/",
     model: "web",
   },
   {
@@ -79,7 +79,26 @@ const projects: Project[] = [
     description: "A matrimonial platform designed to help individuals find their life partners with ease and security.",
     link: "https://leelafacility.in",
     model: "web",
-  }
+  },
+  {
+    id: 8,
+    title: "HORIZON 3D",
+    category: "Web Development",
+    image: "https://horizon3d.creovateio.in/favicon.ico",
+    description: "A 3D website for real estate builders who are making good stuff and want to make their online presence.",
+    link: "https://horizon3d.creovateio.in",
+    model: "web",
+  },
+  {
+    id: 9,
+    title: "N8N AUTOMATIONS",
+    category: "AI Agent",
+    image: "data:image/jpeg;base64,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",
+    description: "N8N automations which automate your 90% of work at ground level and give you free space to do other work.",
+    link: "#",
+    model: "web",
+  },
+
 ];
 
 const Portfolio: React.FC = () => {

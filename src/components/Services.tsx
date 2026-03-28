@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code, Film, Briefcase } from 'lucide-react';
+import { Code, Film, Briefcase, Cpu } from 'lucide-react';
 
 interface ServiceProps {
   icon: React.ReactNode;
@@ -49,17 +49,30 @@ const Services: React.FC = () => {
     {
       icon: <Code size={28} />,
       title: "Software as a Service (SaaS)",
-      description: ["Website Development" , "Application Development", "E-commerce Solutions", "Content Management Systems (CMS)"]
+      description: ["Website Development", "Application Development", "E-commerce Solutions", "Content Management Systems (CMS)"]
     },
     {
       icon: <Film size={28} />,
       title: "Digital Marketing",
-      description: ["Social Media Management", "Content Creation", "SEO Optimization" , "Content Writing" , "Video Editing"]
+      description: ["Social Media Management", "Content Creation", "SEO Optimization", "Content Writing", "Video Editing"]
     },
+    // {
+    //   icon: <Briefcase size={28} />,
+    //   title: "Business Services",
+    //   description: ["Business Consulting", "Revenue Optimization", "Competitive Research and Analysis", "Client / Customer Retention Strategy"],
+    // },
     {
-      icon: <Briefcase size={28} />,
-      title: "Business Services",
-      description: ["Business Consulting", "Revenue Optimization", "Competitive Research and Analysis", "Client / Customer Retention Strategy"],
+      icon: <Cpu size={28} />,
+      title: "AI & Automation Services",
+      description: [
+        "N8N workflows",
+        "AI Chatbot Development",
+        "Business Process Automation",
+        "AI Agents & Workflow Automation",
+        "Customer Support Automation",
+        "AI Content Generation",
+        "Custom AI Solutions for Business Growth",
+      ],
     }
   ];
 

@@ -52,7 +52,10 @@ const Contact: React.FC = () => {
         method: "POST",
         body: form,
       });
-
+      const data = await fetch('https://n8n.creovavteio.in/webhook/enquiry', {
+        method: 'POST',
+        body:form
+      })
       const result = await res.json();
 
       if (result.result === "success") {
