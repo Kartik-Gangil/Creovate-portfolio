@@ -29,6 +29,14 @@ const testimonials: TestimonialProps[] = [
     content: "They delivered our project on time and fullfilled our expectations.",
     rating: 5,
   },
+  {
+    name: "Leela Facility & Marriage Bureau",
+    role: "Founder & CEO",
+    company: "Leela Facility & Marriage Bureau",
+    image: "https://leelafacility.in/assets/logo-C0TCjoYr.png",
+    content: "They delivered my website with in a week and the website is very good and attractive.",
+    rating: 5,
+  },
 ];
 
 const TestimonialCard: React.FC<TestimonialProps & { index: number; active: boolean }> = ({ 
